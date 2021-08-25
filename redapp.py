@@ -28,7 +28,7 @@ st.write("""
 st.write("## Compétences")
 df = pd.DataFrame({
         'Compétence': ["Devops", "Linux", "Virtualisation", "Scripting","Conteneurisation","Gestion des configurations"],
-        'Technologies': ["git, Kubernes, Docker, jenkins, \n Ansible, Prometheus, Grafana, AWS ","Debian, Ubuntu, RedHat/CentOS","Virtualbox, Nutanix", "Python, Shell", "Docker, Kubernetes", "Ansible, Puppet"],
+        'Technologies': ["git, Kubernes, Docker, jenkins, Ansible, Prometheus, Grafana, AWS ","Debian, Ubuntu, RedHat/CentOS","Virtualbox, Nutanix", "Python, Shell", "Docker, Kubernetes", "Ansible, Puppet"],
         'Niveau/5': ['***', '*****', '***', '****', '*****', '****']
         })
 #dfStyler = df.style.set_properties(subset=['Compétence'],**{'text-align': 'right'})
