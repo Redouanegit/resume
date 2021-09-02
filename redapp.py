@@ -28,28 +28,38 @@ st.write("""
 st.write("## Compétences")
 df = pd.DataFrame({
         'Compétence': ["Devops", "Linux", "Virtualisation", "Scripting","Conteneurisation","Gestion des configurations"],
-        'Technologies': ["git, Kubernes, Docker, jenkins, \n Ansible, Prometheus, Grafana, AWS ","Debian, Ubuntu, RedHat/CentOS","Virtualbox, Nutanix", "Python, Shell", "Docker, Kubernetes", "Ansible, Puppet"],
+        'Technologies': ["git, Kubernes, Docker, jenkins \n , Ansible, Prometheus, Grafana, AWS ","Debian, Ubuntu, RedHat/CentOS","Virtualbox, Nutanix", "Python, Shell", "Docker, Kubernetes", "Ansible, Puppet"],
         'Niveau/5': ['***', '*****', '***', '****', '*****', '****']
         })
-#dfStyler = df.style.set_properties(subset=['Compétence'],**{'text-align': 'right'})
-#dfStyler.set_table_styles([dict(selector='th', props=[('text-align', 'right')])])
+
+
+
 df.style.set_properties(**{'text-align': 'left'}).set_table_styles([ dict(selector='th', props=[('text-align', 'left')] ) ])
+
+
+
 
 add_selectbox = st.sidebar.selectbox(
     "How would you like to be contacted?",
     ("Email", "Home phone", "Mobile phone")
 )
+
 df
 option = st.selectbox(
     'Selectionnez une compétence',
      df['Compétence'])
 'You selected: ', option
+
+st.write("Expand to check some of my works")
+
+expander = st.expander(option)
+if option == "Devops":
+    expander.write("Public Applicatio Using Nginx-ingress-controller [link to git repository](https://github.com/Redouanegit/Public_App_Nginx-ingress)")
+
 left_column, right_column = st.columns(2)
 pressed = left_column.button('3fett hna')
 if pressed:
     right_column.write("Sriwriw!")
-expander = st.expander(option)
-expander.write("explanations explanations explanations explanations explanations explanations explanations... \n explanations explanations explanations explanations....")
 'Starting a long computation...'
 # Add a placeholder
 latest_iteration = st.empty()
