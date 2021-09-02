@@ -7,7 +7,7 @@ st.set_page_config(layout="wide") #,initial_sidebar_state="auto")
 st.markdown('<style>body{background-color: Blue;}</style>',unsafe_allow_html=True)
 
 #st.title("This is Red's App")
-st.markdown("<h1 style='text-align: center; font-size:50px; '>Ingénieur système</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; font-size:50px; '>Ingénieur système \n et application</h1>", unsafe_allow_html=True)
 
 st.write("     ")
 st.write("     ")
@@ -54,19 +54,19 @@ st.write("Expand to check some of my works")
 
 expander = st.expander(option)
 if option == "Devops":
-    expander.write("Public Applicatio Using Nginx-ingress-controller [link to git repository](https://github.com/Redouanegit/Public_App_Nginx-ingress)")
+    expander.write("Kubernetes public Application Using Nginx-ingress-controller [link to git repository](https://github.com/Redouanegit/Public_App_Nginx-ingress)")
 
 left_column, right_column = st.columns(2)
 pressed = left_column.button('3fett hna')
 if pressed:
     right_column.write("Sriwriw!")
-'Starting a long computation...'
-# Add a placeholder
-latest_iteration = st.empty()
-bar = st.progress(0)
-for i in range(100):
-  # Update the progress bar with each iteration.
-  latest_iteration.text(f'Iteration {i+1}')
-  bar.progress(i + 1)
-  time.sleep(0.05)
-'...Saaaafi Saaaaliiina !'
+    'Starting a long computation...'
+    # Add a placeholder
+    latest_iteration = st.empty()
+    bar = st.progress(0)
+    for i in range(100):
+        # Update the progress bar with each iteration.
+        latest_iteration.text(f'Iteration {i+1}')
+        bar.progress(i + 1)
+        time.sleep(0.05)
+    '...Saaaafi Saaaaliiina !'
