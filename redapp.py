@@ -13,6 +13,7 @@ st.write("     ")
 st.write("     ")
 st.write("     ")
 
+
 st.image("images/red.jpg", width=200)
 st.write("""
         # Redouane NOUAF
@@ -34,13 +35,6 @@ df = pd.DataFrame({
 
 
 df.style.set_properties(**{'text-align': 'left'}).set_table_styles([ dict(selector='th', props=[('text-align', 'left')] ) ])
-        'Technologies': ["git, Kubernes, Docker, jenkins \n Ansible, Prometheus, Grafana, AWS ","Debian, Ubuntu, RedHat/CentOS","Virtualbox, Nutanix", "Python, Shell", "Docker, Kubernetes", "Ansible, Puppet"],
-        'Niveau/5': ['***', '*****', '***', '****', '*****', '****']
-        })
-df.style.set_properties(**{'text-align': 'left'}).set_table_styles([ dict(selector='th', props=[('text-align', 'left')] ) ])
-#dfStyler = df.style.set_properties(subset=['Compétence'],**{'text-align': 'right'})
-#dfStyler.set_table_styles([dict(selector='th', props=[('text-align', 'right')])])
-
 
 
 
@@ -50,7 +44,6 @@ add_selectbox = st.sidebar.selectbox(
     ("Email", "Home phone", "Mobile phone")
 )
 
-left_column, center_column, right_column = st.columns(3)
 df
 option = st.selectbox(
     'Selectionnez une compétence',
@@ -64,7 +57,6 @@ if option == "Devops":
     expander.write("Public Applicatio Using Nginx-ingress-controller [link to git repository](https://github.com/Redouanegit/Public_App_Nginx-ingress)")
 
 left_column, right_column = st.columns(2)
-left_column, center_column, right_column = st.columns(3)
 pressed = left_column.button('3fett hna')
 if pressed:
     right_column.write("Sriwriw!")
